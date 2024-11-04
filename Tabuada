@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+	int n = 5;
+	tabuada(5);
+
+	return 1;
+}
+
+void tabuada(int n){
+	exibe_cabecalho(n);
+	int i;
+	for(i = 1;i<=12;i++){
+		printf("%-2d x %-2d = %-2d\n", n, i, n * i);
+	}printf("\n");
+}
+
+void exibe_cabecalho(int n){
+	printf("===========================\n");
+	printf("TABUADA DE %d\n", n);
+	printf("===========================\n");
+}
