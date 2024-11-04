@@ -3,9 +3,10 @@
 float fatorial(int num);
 
 int main(){
-    int n = 5;
-    printf("%d! = %.2f\n", n, fatorial(n));
-
+    int n = 6, i;
+    for(i = n;n>=0;i--){
+    printf("%-2d! = %.2f\n", i, fatorial(i));
+}
     return 1;
 }
 
