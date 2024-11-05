@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int mdc(int, int);
+
+main(){
+    int i, num1, num2;
+    do{
+        printf("\nEntre com dois numeros inteiros positivos: ");
+        scanf(" %d, %d", &num1, &num2);
+    }while((num1<=0) || (num2<=0));
+
+    printf("O MDC entre %d e %d e %d\n\n", num1, num2, mdc(num1, num2));
+    system("pause");
+}
+
+int mdc(int x, int y){
+    if(y==0)
+        return x;
+    else
+        if (x<y)
+            return mdc(y,x);
+        else
+            return mdc(y, x % y);
+}
