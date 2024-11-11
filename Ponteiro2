@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void troca_var(int *, int *);
+
+int main(){
+	int a,b;
+	a = 5; b = 7;
+	troca_var(&a, &b);	//Passamos o endereço das variaveis
+	printf("%d %d \n", a, b);
+	system("pause");
+}
+void troca_var(int *px, int *py){
+	int temp;
+	temp = *py;
+	*px = *py;
+	*py = temp;
+}
